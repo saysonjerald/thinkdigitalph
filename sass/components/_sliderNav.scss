@@ -1,0 +1,53 @@
+#fp-nav {
+  margin-left: 2rem;
+
+  @include respond(768) {
+    display: none;
+  }
+
+  & ul li {
+    margin-bottom: 3rem;
+  }
+
+  & ul li a span {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 0 0;
+  }
+
+  & ul li:hover a span {
+    background-color: #f7f7f7;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 0 0;
+  }
+
+  & ul li a.active span,
+  & ul li:hover a.active span {
+    background-color: #f7f7f7;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 0 0 50% 0;
+  }
+
+  & ul li a.active .navBarSlider {
+    display: inline-block;
+    background-color: #f7f7f7;
+    width: 0.3rem;
+    height: 10rem;
+    position: relative;
+    top: 280%;
+    left: 80%;
+    transform-origin: top;
+  }
+
+  & ul li .fp-tooltip {
+    font-family: "Avenir Black";
+    font-size: 1.4rem;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 3rem;
+    top: 4px;
+  }
+}

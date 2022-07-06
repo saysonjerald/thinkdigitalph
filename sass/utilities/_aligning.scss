@@ -1,0 +1,15 @@
+.u-align-content-center {
+  display: flex !important;
+  align-items: center !important;
+  height: 100vh;
+
+  @include respond(768) {
+    display: block;
+    align-items: center;
+    height: auto;
+  }
+}
+
+.u-center-btn {
+  text-align: center !important;
+}

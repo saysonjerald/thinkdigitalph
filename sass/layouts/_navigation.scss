@@ -1,0 +1,208 @@
+.nav {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem 0 4rem;
+  width: 100%;
+  position: absolute;
+  top: 1.5rem;
+  z-index: 300;
+  transform: translateY(-100px);
+
+  &__logo {
+    width: 4rem;
+    @include respond(768) {
+      display: none;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__phone {
+    display: none;
+    @include respond(768) {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #333;
+      position: relative;
+      margin-right: 1rem;
+      border: 0.5px solid rgba(51, 51, 51, 0.24);
+    }
+
+    &--icon {
+      display: none;
+      @include respond(768) {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 60%;
+        fill: #ff4200;
+      }
+    }
+  }
+}
+
+.burger {
+  width: 40px;
+  cursor: pointer;
+
+  @include respond(400) {
+    transform: scale(0.6) translateX(3rem);
+  }
+
+  @include respond(411) {
+    transform: scale(0.7);
+  }
+
+  @include respond(470) {
+    transform: scale(0.8);
+  }
+
+  @include respond(600) {
+    transform: scale(0.9);
+  }
+
+  @include respond(768) {
+    transform: scale(1);
+  }
+
+  @include respond(860) {
+    transform: scale(0.6);
+  }
+
+  @include respond(1120) {
+    transform: scale(0.7);
+  }
+
+  @include respond(1280) {
+    transform: scale(0.8);
+  }
+
+  @include respond(1440) {
+    transform: scale(0.9);
+  }
+}
+
+.line1,
+.line2,
+.line3 {
+  width: 100%;
+  height: 3px;
+  margin: 6px;
+  background-color: #fff;
+  pointer-events: none;
+}
+
+.nav-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 200;
+  opacity: 1;
+  clip-path: circle(50px at 110% -10%);
+  -webkit-clip-path: circle(50px at 110% -10%);
+
+  &__links {
+    font-family: "AvenirNext Bold";
+    font-size: 5.4rem;
+    flex-basis: 40rem;
+
+    @include respond(768) {
+      text-align: center;
+    }
+
+    & li {
+      padding: 3rem 0;
+      line-height: 1;
+      list-style: none;
+      &:nth-last-of-type(1) {
+        margin-bottom: 5rem;
+      }
+
+      & a:link,
+      & a:visited {
+        text-decoration: none;
+        color: black;
+      }
+
+      & a:active,
+      & a:hover {
+        text-decoration: none;
+        color: #ff4500;
+      }
+    }
+  }
+
+  &__cta {
+    font-family: "Avenir Heavy";
+    font-size: 2.5rem;
+    color: #000;
+    text-transform: uppercase;
+    background-color: transparent;
+    position: relative;
+    letter-spacing: 0.3rem;
+    text-decoration: none;
+
+    @include respond(768) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: -0.1rem;
+    right: -4.5rem;
+    fill: #ff4200;
+    width: 3.4rem;
+  }
+
+  &__contacts {
+    flex-basis: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @include respond(768) {
+      display: none;
+    }
+
+    & ul {
+      list-style: none;
+
+      & a {
+        &:link,
+        &:active {
+          font-family: "Avenir Heavy";
+          font-size: 2.5rem;
+          text-decoration: none;
+          color: #333;
+          margin-bottom: 3rem;
+          display: inline-block;
+        }
+        &:visited,
+        &:hover {
+          color: #333;
+        }
+      }
+    }
+  }
+}
+
+body.hide {
+  overflow: hidden;
+}

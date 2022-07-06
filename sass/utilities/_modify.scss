@@ -1,0 +1,15 @@
+#modify-fp-tableCell {
+  vertical-align: top !important;
+}
+
+#margin-bottom-2-rem {
+  margin-bottom: 2rem !important;
+}
+
+#padding-lr-20-rem {
+  padding: 0 20rem !important;
+
+  @include respond(768) {
+    padding: 0 5rem !important;
+  }
+}

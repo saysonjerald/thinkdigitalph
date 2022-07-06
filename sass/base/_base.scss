@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(1600) {
+    font-size: 55.5%;
+  }
+  @include respond(1440) {
+    font-size: 51.5%;
+  }
+  @include respond(1360) {
+    font-size: 46.5%;
+  }
+  @include respond(1280) {
+    font-size: 41.5%;
+  }
+  @include respond(1120) {
+    font-size: 36.5%;
+  }
+  @include respond(960) {
+    font-size: 34.5%;
+  }
+  @include respond(900) {
+    font-size: 32.5%;
+  }
+  @include respond(860) {
+    font-size: 29.5%;
+  }
+  @include respond(400) {
+    font-size: 28.5%;
+  }
+}
+
+body {
+  font-family: "OpenSans";
+  box-sizing: border-box;
+}
+
+a:link,
+a:active,
+a:hover,
+a:visited {
+  text-decoration: none;
+}

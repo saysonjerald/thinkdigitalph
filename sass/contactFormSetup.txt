@@ -1,0 +1,87 @@
+//Lets talk form
+<div class="ctaForm__formContainer">
+            <div class="ctaForm__input ctaForm__input--1">
+              <p class="ctaForm__input--label">Name *</p>
+[text* fullname class:ctaForm__input--box]
+            </div>
+            <div class="ctaForm__input ctaForm__input--2">
+              <p class="ctaForm__input--label">Business Name / Website</p>
+[text* businessNameOrWebsite class:ctaForm__input--box]
+            </div>
+            <div class="ctaForm__input ctaForm__input--3">
+              <p class="ctaForm__input--label">Email *</p>
+[email* email class:ctaForm__input--box]
+            </div>
+            <div class="ctaForm__input ctaForm__input--4">
+              <p class="ctaForm__input--label">Phone *</p>
+[tel* phone class:ctaForm__input--box]
+            </div>
+            <div class="ctaForm__inputServices">
+              <p class="ctaForm__input--label">Services you are interested in? *</p>
+              <div class="ctaForm__optionsWrapper">
+                <div class="ctaForm__option">
+[checkbox interested-services use_label_element "SEO"]
+                </div>
+                <div class="ctaForm__option">
+[checkbox interested-services use_label_element "Google Ads"]
+                </div>
+                <div class="ctaForm__option">
+[checkbox interested-services use_label_element "Facebook Ads"]
+                </div>
+                <div class="ctaForm__option">
+[checkbox interested-services use_label_element "Website"]
+                </div>
+                <div class="ctaForm__option">
+[checkbox interested-services use_label_element "Digital Advertising"]
+                </div>
+                <div class="ctaForm__option">
+[checkbox interested-services use_label_element "Retargeting"]
+                </div>
+                <div class="ctaForm__option">
+[checkbox interested-services use_label_element "Consulting"]
+                </div>
+                <div class="ctaForm__option">
+[checkbox interested-services use_label_element "Others"]
+                </div>
+              </div>
+            </div>
+            <div class="ctaForm__input ctaForm__input--5">
+              <p class="ctaForm__input--label">Budget?*</p>
+              [select budget class:ctaForm__input--box "₱15,000 - ₱30,000" "₱30,000 - ₱40,000" "₱40,000 - ₱45,000" "₱45,000 - ₱50,000" "₱50,000 - ₱100,000" "₱100,000 and up"]
+            </div>
+            <div class="ctaForm__textArea">
+              <p class="ctaForm__input--label">How can we help you?</p>
+[textarea message 30x10 class:ctaForm__input--box]
+            </div>
+          </div>
+          <div class="u-center-btn">
+[submit class:ctaForm__button "Submit"]
+            <p class="ctaForm__contactText" >Or call us on</p>
+            <a href="tel:0995 524 9496" class="ctaForm__contactNo">0995 524 9496</a>
+          </div>
+
+
+
+//Get in touch
+<div class="footer__form">
+                <div class="footer__form--row">
+
+[text* name class:footer__form--name placeholder "Your Name"]
+[email* email class:footer__form--email placeholder "Your Email"]
+                </div>
+                [select* topic class:footer__form--topic "Digital Transformation" "User Experience Design" "Wordpress Development" "Local Search Engine Optimization" "Digital Marketing" "Content Marketing"]
+                [textarea message 30x10 class:footer__form--message placeholder "Message"]
+                [submit class:footer__form--button "Get in touch"]
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+

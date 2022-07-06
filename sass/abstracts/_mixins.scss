@@ -1,0 +1,112 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == 400 {
+    @media only screen and (max-width: 25em) {
+      @content;
+    }
+  } //400px Mobile View
+
+  @if $breakpoint == 411 {
+    @media only screen and (max-width: 25.6875em) {
+      @content;
+    } //411px Mobile View
+  }
+  @if $breakpoint == 470 {
+    @media only screen and (max-width: 29.375em) {
+      @content;
+    } //470px Mobile View
+  }
+
+  @if $breakpoint == 600 {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px Mobile View
+  }
+
+  @if $breakpoint == 768 {
+    @media only screen and (max-width: 47.9375em) {
+      @content;
+    } //768px Mobile View
+  }
+
+  @if $breakpoint == 900 {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+
+  @if $breakpoint == 960 {
+    @media only screen and (max-width: 60em) {
+      @content;
+    } //900px
+  }
+
+  @if $breakpoint == 860 {
+    @media only screen and (max-width: 53.75em) {
+      @content;
+    } //860px
+  }
+
+  @if $breakpoint == 1120 {
+    @media only screen and (max-width: 70em) {
+      @content;
+    } //1120
+  }
+  @if $breakpoint == 1280 {
+    @media only screen and (max-width: 80em) {
+      @content;
+    } //1280
+  }
+  @if $breakpoint == 1360 {
+    @media only screen and (max-width: 85em) {
+      @content;
+    } //1360
+  }
+  @if $breakpoint == 1440 {
+    @media only screen and (max-width: 90em) {
+      @content;
+    } //1440
+  }
+  @if $breakpoint == 1600 {
+    @media only screen and (max-width: 100em) {
+      @content;
+    } //1600
+  }
+  @if $breakpoint == 1700 {
+    @media only screen and (max-width: 106.25em) {
+      @content;
+    } //1700
+  }
+}
